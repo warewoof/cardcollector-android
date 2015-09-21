@@ -1,0 +1,3 @@
+INDEX VERSION 1.126+/Users/fsyin505/Dropbox/Projects/Android/workspace-cardcollector/.metadata/.plugins/org.eclipse.jdt.core
+1284880950.index
+2375616280.index

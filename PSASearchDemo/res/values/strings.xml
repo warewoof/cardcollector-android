@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name"><b><i>PSA</i></b> Cert Search</string>
+    <string name="search_prompt">Search the PSA registry</string>
+    <string name="input_error">Cert # should be at least 8-digits</string>
+    
+    <!-- Search screen -->
+    <string name="psasearch_text_hint">PSA Cert #</string>
+    <string name="psasearch_button_text">Verify</string>
+
+    <!-- Results screen -->
+    <string name="default_search_title">Searching...</string>
+    <string name="default_search_notfound_title">Not found</string>
+
+    <!-- History screen -->
+    <string name="default_history_title">Recent Searches</string>
+    <string name="history_button_text">Search History</string>
+    <string name="history_none_text">No recent searches</string>
+
+    
+    <string name="key_clear">CLR</string>
+    <string name="key_back">\u003C</string>
+    <string name="key_0">0</string>
+    <string name="key_1">1</string>
+    <string name="key_2">2</string>
+    <string name="key_3">3</string>
+    <string name="key_4">4</string>
+    <string name="key_5">5</string>
+    <string name="key_6">6</string>
+    <string name="key_7">7</string>
+    <string name="key_8">8</string>
+    <string name="key_9">9</string>
+    
+    
+    <string name="action_about">About this app</string>
+    <string name="about_1">PSA is a card and collectible grading service.  
+        This free app is a convenient certification lookup tool, and was built by Warewoof LLC for demo use</string>
+    <string name="about_2">For more on PSA services, visit www.psacard.com</string>
+    <string name="about_3">For more on app development, contact@warewoof.com</string>
+
+    <string name="history_action_clear">Clear History</string>
+    
+</resources>

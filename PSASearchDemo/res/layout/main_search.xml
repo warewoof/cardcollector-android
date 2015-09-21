@@ -1,0 +1,282 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/search_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:context=".MainActivity$SearchSectionFragment" >
+
+    <!-- Dummy content. -->
+
+    <LinearLayout
+        android:id="@+id/searchprompt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".4"
+        android:background="@color/button_border"
+        android:orientation="vertical"
+        android:padding="16dp" >
+
+        <TextView
+            android:id="@+id/header_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="#222222"
+            android:textSize="22sp"
+            android:typeface="normal" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" >
+
+            <EditText
+                android:id="@+id/edit_box"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/editbox"
+                android:focusable="false"
+                android:hint="@string/psasearch_text_hint"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/cancel_button"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignRight="@id/edit_box"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/cancel_up"
+                android:onClick="keyClicked" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/search_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/buttonbackground"
+            android:onClick="keyClicked"
+            android:singleLine="true"
+            android:text="@string/psasearch_button_text"
+            android:textColor="@color/button_text" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/keys"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".6"
+        android:background="@color/button_border" >
+
+        <Button
+            android:id="@+id/history_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/history_button_height"
+            android:text="@string/history_button_text"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/historybuttonbackground"
+            android:onClick="keyClicked"
+            android:singleLine="true"
+            android:textColor="@color/button_text"/>
+
+        <LinearLayout
+            android:id="@+id/keys_row4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/history_button"
+            android:layout_marginBottom="1dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/key_clear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/key_button"
+                android:onClick="keyClicked"
+                android:padding="@dimen/key_button_padding"
+                android:text="@string/key_clear"
+                android:textColor="@color/button_text"
+                android:textSize="@dimen/key_text_size" />
+
+            <Button
+                android:id="@+id/key_0"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/key_button"
+                android:onClick="keyClicked"
+                android:padding="@dimen/key_button_padding"
+                android:text="@string/key_0"
+                android:textColor="@color/button_text"
+                android:textSize="@dimen/key_text_size" />
+
+            <Button
+                android:id="@+id/key_back"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/key_button"
+                android:onClick="keyClicked"
+                android:padding="@dimen/key_button_padding"
+                android:text="@string/key_back"
+                android:textColor="@color/button_text"
+                android:textSize="@dimen/key_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/keys_row3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/keys_row4"
+            android:layout_marginBottom="1dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/key_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/key_button"
+                android:onClick="keyClicked"
+                android:padding="@dimen/key_button_padding"
+                android:text="@string/key_1"
+                android:textColor="@color/button_text"
+                android:textSize="@dimen/key_text_size" />
+
+            <Button
+                android:id="@+id/key_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/key_button"
+                android:onClick="keyClicked"
+                android:padding="@dimen/key_button_padding"
+                android:text="@string/key_2"
+                android:textColor="@color/button_text"
+                android:textSize="@dimen/key_text_size" />
+
+            <Button
+                android:id="@+id/key_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/key_button"
+                android:onClick="keyClicked"
+                android:padding="@dimen/key_button_padding"
+                android:text="@string/key_3"
+                android:textColor="@color/button_text"
+                android:textSize="@dimen/key_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/keys_row2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/keys_row3"
+            android:layout_marginBottom="1dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/key_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/key_button"
+                android:onClick="keyClicked"
+                android:padding="@dimen/key_button_padding"
+                android:text="@string/key_4"
+                android:textColor="@color/button_text"
+                android:textSize="@dimen/key_text_size" />
+
+            <Button
+                android:id="@+id/key_5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/key_button"
+                android:onClick="keyClicked"
+                android:padding="@dimen/key_button_padding"
+                android:text="@string/key_5"
+                android:textColor="@color/button_text"
+                android:textSize="@dimen/key_text_size" />
+
+            <Button
+                android:id="@+id/key_6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/key_button"
+                android:onClick="keyClicked"
+                android:padding="@dimen/key_button_padding"
+                android:text="@string/key_6"
+                android:textColor="@color/button_text"
+                android:textSize="@dimen/key_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/keys_row1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/keys_row2"
+            android:layout_marginBottom="1dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/key_7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/key_button"
+                android:onClick="keyClicked"
+                android:padding="@dimen/key_button_padding"
+                android:text="@string/key_7"
+                android:textColor="@color/button_text"
+                android:textSize="@dimen/key_text_size" />
+
+            <Button
+                android:id="@+id/key_8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/key_button"
+                android:onClick="keyClicked"
+                android:padding="@dimen/key_button_padding"
+                android:text="@string/key_8"
+                android:textColor="@color/button_text"
+                android:textSize="@dimen/key_text_size" />
+
+            <Button
+                android:id="@+id/key_9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/key_button"
+                android:onClick="keyClicked"
+                android:padding="@dimen/key_button_padding"
+                android:text="@string/key_9"
+                android:textColor="@color/button_text"
+                android:textSize="@dimen/key_text_size" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

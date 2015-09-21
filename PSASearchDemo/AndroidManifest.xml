@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.warewoof.psasearch"
+    android:versionCode="2"
+    android:versionName="2.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="14" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.VIBRATE"/>
+
+    <application
+        android:name="com.warewoof.psasearch.Functions"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.warewoof.psasearch.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"  >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity 
+            android:name="com.warewoof.psasearch.ResultsActivity"
+            android:label="@string/default_search_title"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.warewoof.psasearch.CGCResultsActivity"
+            android:label="@string/default_search_title"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.warewoof.psasearch.HistoryActivity"
+            android:label="@string/default_history_title"
+            android:screenOrientation="portrait" />
+        <activity 
+            android:name="com.warewoof.psasearch.AboutActivity"
+            android:label="@string/action_about"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

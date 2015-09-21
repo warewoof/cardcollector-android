@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_clearhistory"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/history_action_clear"/>
+
+</menu>
